@@ -1,6 +1,6 @@
 # navigate-locally
 
-A lightweight desktop app that generates a **live-updating QR code** from user input, making it easy to share text or local URLs (e.g. Docker services, dev servers) with a phone on the same Wi-Fi network.
+A lightweight desktop app that generates a **live-updating QR code** from user input, making it easy to share text or local URLs (e.g. Docker services, dev servers) with a phone on the same Wi-Fi network. Available binary for macos and windows.
 
 GUI content:
 ```
@@ -15,4 +15,4 @@ Last IP: 192.168.x.y
 [text preview]
 ```
 
-Enjoy :)
+ Enjoy :)
