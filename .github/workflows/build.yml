@@ -1,5 +1,4 @@
-name: Build QR Tray
-
+name: Build QR App
 on:
   push:
     tags:
@@ -19,18 +18,18 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
-          pip install pyinstaller
+          python -m pip install --upgrade pip
+          pip install PySide6 qrcode[pil] pyinstaller
 
-      - name: Build executable
+      - name: Build app
         run: |
-          pyinstaller --onefile --windowed app.py --name qr-tray-mvp
+          pyinstaller --onefile --windowed app.py --name qr-live-app
 
-      - name: Upload artifact
+      - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.os }}-build
